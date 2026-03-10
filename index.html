@@ -1,0 +1,2511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare Pro - Medical Clinic Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon"><i class="fas fa-heartbeat"></i></div>
+                <span class="logo-text">Medi<strong>Care</strong> Pro</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#page-home" onclick="showPage('home')" class="nav-link active">Home</a></li>
+                <li><a href="#services-section" onclick="showPage('services')" class="nav-link">Services</a></li>
+                <li><a href="#page-doctors" onclick="showPage('doctors')" class="nav-link">Doctors</a></li>
+                <li><a href="#page-pharmacy" onclick="showPage('pharmacy')" class="nav-link">Pharmacy</a></li>
+                <li><a href="#about-section" onclick="showPage('about')" class="nav-link">About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn btn-outline" onclick="showPage('auth'); toggleAuthForm('loginForm')">Log In</button>
+                <button class="btn btn-primary" onclick="showPage('auth'); toggleAuthForm('signupForm')">Sign Up</button>
+            </div>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HOME PAGE ==================== -->
+    <div id="page-home" class="page active">
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-badge"><i class="fas fa-shield-alt"></i> Trusted by 50,000+ Patients</div>
+                <h1 class="hero-title">Your Health, Our <span class="highlight">Priority</span></h1>
+                <p class="hero-subtitle">Experience world-class healthcare with expert doctors, modern facilities, and seamless appointment booking — all in one place.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-lg" onclick="showPage('auth')">
+                        <i class="fas fa-calendar-plus"></i> Book Appointment Now
+                    </button>
+                    <button class="btn btn-outline btn-lg" onclick="showPage('doctors')">
+                        <i class="fas fa-user-md"></i> Meet Our Doctors
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Expert Doctors</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Happy Patients</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Specialties</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-container">
+                    <div class="hero-illustration">
+                        <div class="medical-card floating-card card-1">
+                            <div class="card-icon green"><i class="fas fa-check-circle"></i></div>
+                            <div class="card-text">
+                                <strong>Appointment Confirmed</strong>
+                                <span>Dr. Sarah Johnson - Today 2:30 PM</span>
+                            </div>
+                        </div>
+                        <div class="doctor-avatar-container">
+                            <div class="doctor-avatar">
+                                <div class="avatar-circle">
+                                    <i class="fas fa-user-md"></i>
+                                </div>
+                                <div class="avatar-ring ring-1"></div>
+                                <div class="avatar-ring ring-2"></div>
+                            </div>
+                        </div>
+                        <div class="medical-card floating-card card-2">
+                            <div class="card-icon blue"><i class="fas fa-heart"></i></div>
+                            <div class="card-text">
+                                <strong>Health Score</strong>
+                                <span>98/100 - Excellent</span>
+                            </div>
+                        </div>
+                        <div class="medical-card floating-card card-3">
+                            <div class="card-icon orange"><i class="fas fa-pills"></i></div>
+                            <div class="card-text">
+                                <strong>Prescription Ready</strong>
+                                <span>3 medications prescribed</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-bg-shape"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section" id="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">What We Offer</span>
+                    <h2 class="section-title">Comprehensive Healthcare <span class="highlight">Services</span></h2>
+                    <p class="section-subtitle">We provide a full spectrum of medical services designed to keep you and your family healthy.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-clock"></i></div>
+                        <h3>24/7 Emergency Care</h3>
+                        <p>Round-the-clock emergency medical services with immediate response teams always ready.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-flask"></i></div>
+                        <h3>Modern Laboratories</h3>
+                        <p>State-of-the-art diagnostic labs with fast, accurate results and advanced testing equipment.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-user-md"></i></div>
+                        <h3>Expert Specialists</h3>
+                        <p>Over 200 board-certified specialists across 15+ medical disciplines at your service.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-video"></i></div>
+                        <h3>Telemedicine</h3>
+                        <p>Virtual consultations from the comfort of your home with secure video appointments.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-x-ray"></i></div>
+                        <h3>Advanced Imaging</h3>
+                        <p>MRI, CT scans, and X-ray facilities with digital reporting and instant access.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-prescription-bottle-alt"></i></div>
+                        <h3>Digital Prescriptions</h3>
+                        <p>Electronic prescriptions sent directly to pharmacies, eliminating paperwork and delays.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specializations Section -->
+        <section class="section section-gray">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Medical Departments</span>
+                    <h2 class="section-title">Browse by <span class="highlight">Specialization</span></h2>
+                    <p class="section-subtitle">Find the right specialist for your specific health needs.</p>
+                </div>
+                <div class="specialization-filter">
+                    <button class="filter-btn active" onclick="filterDoctors('all', this)">All</button>
+                    <button class="filter-btn" onclick="filterDoctors('cardiology', this)">Cardiology</button>
+                    <button class="filter-btn" onclick="filterDoctors('dentistry', this)">Dentistry</button>
+                    <button class="filter-btn" onclick="filterDoctors('neurology', this)">Neurology</button>
+                    <button class="filter-btn" onclick="filterDoctors('orthopedics', this)">Orthopedics</button>
+                    <button class="filter-btn" onclick="filterDoctors('pediatrics', this)">Pediatrics</button>
+                </div>
+                <div class="departments-grid">
+                    <div class="dept-card" data-dept="cardiology" onclick="filterAndGo('cardiology')">
+                        <div class="dept-icon"><i class="fas fa-heartbeat"></i></div>
+                        <h3>Cardiology</h3>
+                        <p>Heart & Vascular Care</p>
+                        <span class="dept-count">12 Doctors</span>
+                    </div>
+                    <div class="dept-card" data-dept="dentistry" onclick="filterAndGo('dentistry')">
+                        <div class="dept-icon"><i class="fas fa-tooth"></i></div>
+                        <h3>Dentistry</h3>
+                        <p>Oral Health & Surgery</p>
+                        <span class="dept-count">8 Doctors</span>
+                    </div>
+                    <div class="dept-card" data-dept="neurology" onclick="filterAndGo('neurology')">
+                        <div class="dept-icon"><i class="fas fa-brain"></i></div>
+                        <h3>Neurology</h3>
+                        <p>Brain & Nerve Disorders</p>
+                        <span class="dept-count">10 Doctors</span>
+                    </div>
+                    <div class="dept-card" data-dept="orthopedics" onclick="filterAndGo('orthopedics')">
+                        <div class="dept-icon"><i class="fas fa-bone"></i></div>
+                        <h3>Orthopedics</h3>
+                        <p>Bones & Joint Care</p>
+                        <span class="dept-count">9 Doctors</span>
+                    </div>
+                    <div class="dept-card" data-dept="pediatrics" onclick="filterAndGo('pediatrics')">
+                        <div class="dept-icon"><i class="fas fa-baby"></i></div>
+                        <h3>Pediatrics</h3>
+                        <p>Children's Health</p>
+                        <span class="dept-count">11 Doctors</span>
+                    </div>
+                    <div class="dept-card" data-dept="dermatology" onclick="filterAndGo('dermatology')">
+                        <div class="dept-icon"><i class="fas fa-hand-sparkles"></i></div>
+                        <h3>Dermatology</h3>
+                        <p>Skin & Hair Care</p>
+                        <span class="dept-count">7 Doctors</span>
+                    </div>
+                    <div class="dept-card" data-dept="ophthalmology" onclick="filterAndGo('ophthalmology')">
+                        <div class="dept-icon"><i class="fas fa-eye"></i></div>
+                        <h3>Ophthalmology</h3>
+                        <p>Eye Care & Surgery</p>
+                        <span class="dept-count">6 Doctors</span>
+                    </div>
+                    <div class="dept-card" data-dept="psychiatry" onclick="filterAndGo('psychiatry')">
+                        <div class="dept-icon"><i class="fas fa-smile"></i></div>
+                        <h3>Psychiatry</h3>
+                        <p>Mental Health</p>
+                        <span class="dept-count">8 Doctors</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section" id="about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-visual">
+                        <div class="about-image">
+                            <div class="about-shape"></div>
+                            <div class="about-icon-grid">
+                                <div class="about-icon-item"><i class="fas fa-award"></i><span>Award Winning</span></div>
+                                <div class="about-icon-item"><i class="fas fa-certificate"></i><span>ISO Certified</span></div>
+                                <div class="about-icon-item"><i class="fas fa-star"></i><span>5-Star Rated</span></div>
+                                <div class="about-icon-item"><i class="fas fa-users"></i><span>50K+ Patients</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-content">
+                        <span class="section-badge">About Us</span>
+                        <h2 class="section-title">20 Years of <span class="highlight">Excellence</span> in Healthcare</h2>
+                        <p>Founded in 2004, MediCare Pro has been at the forefront of delivering compassionate, evidence-based medical care. Our mission is simple: to make quality healthcare accessible, efficient, and patient-centered.</p>
+                        <p>We combine cutting-edge technology with a human touch, ensuring every patient receives personalized care tailored to their unique needs. Our team of 200+ specialists work collaboratively to provide holistic health solutions.</p>
+                        <div class="about-features">
+                            <div class="feature-item"><i class="fas fa-check-circle"></i> Board-Certified Specialists</div>
+                            <div class="feature-item"><i class="fas fa-check-circle"></i> JCI Accredited Facility</div>
+                            <div class="feature-item"><i class="fas fa-check-circle"></i> Electronic Health Records</div>
+                            <div class="feature-item"><i class="fas fa-check-circle"></i> Insurance Accepted</div>
+                        </div>
+                        <button class="btn btn-primary" onclick="showPage('auth')">Get Started Today</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section section-blue">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title white">What Our Patients Say</h2>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"The online booking system made it so easy to schedule my appointment. The doctor was excellent and the entire experience was seamless."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JD</div>
+                            <div><strong>Jane Doe</strong><span>Patient since 2022</span></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"I love how I can view my prescriptions and medical history online. The digital pharmacy locator helped me find the nearest pharmacy quickly."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MS</div>
+                            <div><strong>Michael Smith</strong><span>Patient since 2021</span></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Outstanding care! The cardiology department is world-class. I highly recommend MediCare Pro to anyone seeking quality healthcare."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AR</div>
+                            <div><strong>Alice Roberts</strong><span>Patient since 2020</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="nav-logo">
+                            <div class="logo-icon"><i class="fas fa-heartbeat"></i></div>
+                            <span class="logo-text">Medi<strong>Care</strong> Pro</span>
+                        </div>
+                        <p>Providing world-class healthcare with compassion and innovation since 2004.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#" onclick="showPage('home')">Home</a></li>
+                            <li><a href="#" onclick="showPage('doctors')">Find a Doctor</a></li>
+                            <li><a href="#" onclick="showPage('pharmacy')">Pharmacy Locator</a></li>
+                            <li><a href="#" onclick="showPage('auth'); toggleAuthForm('loginForm')">Book Appointment</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Portals</h4>
+                        <ul>
+                            <li><a href="#" onclick="showPage('auth')">Patient Portal</a></li>
+                            <li><a href="#" onclick="showDoctorLogin()">Doctor Login</a></li>
+                            <li><a href="#" onclick="showAdminLogin()">Admin Panel</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Contact</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Medical Center Dr, Health City</p>
+                        <p><i class="fas fa-phone"></i> +1 (800) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> care@medicarepo.com</p>
+                        <p><i class="fas fa-clock"></i> Mon - Sun: 6:00 AM - 11:00 PM</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2024 MediCare Pro. All Rights Reserved. | Privacy Policy | Terms of Service</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ==================== AUTH PAGE ==================== -->
+    <div id="page-auth" class="page">
+        <div class="auth-container">
+            <div class="auth-left">
+                <div class="auth-brand">
+                    <div class="logo-icon large"><i class="fas fa-heartbeat"></i></div>
+                    <h2>MediCare Pro</h2>
+                    <p>Your Health, Our Priority</p>
+                </div>
+                <div class="auth-features">
+                    <div class="auth-feature-item"><i class="fas fa-check-circle"></i> Easy Online Booking</div>
+                    <div class="auth-feature-item"><i class="fas fa-check-circle"></i> Access Medical Records</div>
+                    <div class="auth-feature-item"><i class="fas fa-check-circle"></i> Digital Prescriptions</div>
+                    <div class="auth-feature-item"><i class="fas fa-check-circle"></i> 24/7 Support</div>
+                </div>
+                <div class="auth-portals">
+                    <p class="portal-label">Other Portals:</p>
+                    <button class="portal-btn" onclick="showPage('doctor-login')"><i class="fas fa-stethoscope"></i> Doctor Login</button>
+                    <button class="portal-btn" onclick="showPage('admin-login')"><i class="fas fa-shield-alt"></i> Admin Panel</button>
+                </div>
+            </div>
+            <div class="auth-right">
+                <button class="back-btn" onclick="showPage('home')"><i class="fas fa-arrow-left"></i> Back to Home</button>
+                <!-- Login Form -->
+                <div id="loginForm" class="auth-form active">
+                    <h2>Welcome Back</h2>
+                    <p class="auth-subtitle">Sign in to your patient account</p>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" placeholder="Enter your email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Enter your password" id="loginPass">
+                            <i class="fas fa-eye toggle-pass" onclick="togglePass('loginPass')"></i>
+                        </div>
+                    </div>
+                    <div class="form-options">
+                        <label class="checkbox-label"><input type="checkbox"> Remember me</label>
+                        <a href="#" class="forgot-link">Forgot Password?</a>
+                    </div>
+                    <button class="btn btn-primary full-width" onclick="showPage('patient-dashboard')">Sign In <i class="fas fa-arrow-right"></i></button>
+                    <p class="auth-switch">Don't have an account? <a href="#" onclick="toggleAuthForm('signupForm')">Create Account</a></p>
+                </div>
+                <!-- Signup Form -->
+                <div id="signupForm" class="auth-form active">
+                    <h2>Create Account</h2>
+                    <p class="auth-subtitle">Join MediCare Pro as a Patient</p>
+                    <div class="notice-banner"><i class="fas fa-info-circle"></i> Registration is exclusively for patients. Doctors are added by the Admin.</div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-user"></i>
+                                <input type="text" placeholder="First name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-user"></i>
+                                <input type="text" placeholder="Last name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" placeholder="your@email.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-phone"></i>
+                            <input type="tel" placeholder="+1 (555) 000-0000">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Create a strong password" id="signupPass">
+                            <i class="fas fa-eye toggle-pass" onclick="togglePass('signupPass')"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label"><input type="checkbox"> I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></label>
+                    </div>
+                    <button class="btn btn-primary full-width" onclick="showPage('patient-dashboard')">Create Account <i class="fas fa-arrow-right"></i></button>
+                    <p class="auth-switch">Already have an account? <a href="#" onclick="toggleAuthForm('loginForm')">Sign In</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== DOCTOR LOGIN PAGE ==================== -->
+    <div id="page-doctor-login" class="page">
+        <div class="auth-container">
+            <div class="auth-left doctor-left">
+                <div class="auth-brand">
+                    <div class="logo-icon large teal"><i class="fas fa-stethoscope"></i></div>
+                    <h2>Doctor Portal</h2>
+                    <p>Manage your patients & schedule</p>
+                </div>
+                <div class="auth-features">
+                    <div class="auth-feature-item"><i class="fas fa-check-circle"></i> View Today's Schedule</div>
+                    <div class="auth-feature-item"><i class="fas fa-check-circle"></i> Manage Availability</div>
+                    <div class="auth-feature-item"><i class="fas fa-check-circle"></i> Write Prescriptions</div>
+                    <div class="auth-feature-item"><i class="fas fa-check-circle"></i> Access Patient History</div>
+                </div>
+                <div class="restriction-notice">
+                    <i class="fas fa-lock"></i>
+                    <p>Doctor accounts are created exclusively by the Admin. If you need access, contact your clinic administrator.</p>
+                </div>
+            </div>
+            <div class="auth-right">
+                <button class="back-btn" onclick="showPage('home')"><i class="fas fa-arrow-left"></i> Back to Home</button>
+                <div class="auth-form active">
+                    <h2>Doctor Sign In</h2>
+                    <p class="auth-subtitle">Access your clinical dashboard</p>
+                    <div class="notice-banner warning"><i class="fas fa-shield-alt"></i> This portal is restricted to authorized medical staff only.</div>
+                    <div class="form-group">
+                        <label>Doctor ID / Email</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-id-badge"></i>
+                            <input type="text" placeholder="Enter your Doctor ID or email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Enter your password" id="doctorPass">
+                            <i class="fas fa-eye toggle-pass" onclick="togglePass('doctorPass')"></i>
+                        </div>
+                    </div>
+                    <button class="btn btn-teal full-width" onclick="showPage('doctor-dashboard')">Sign In to Dashboard <i class="fas fa-arrow-right"></i></button>
+                    <p class="auth-switch small">Forgotten credentials? Contact your <strong>clinic administrator</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== ADMIN LOGIN PAGE ==================== -->
+    <div id="page-admin-login" class="page">
+        <div class="auth-container">
+            <div class="auth-left admin-left">
+                <div class="auth-brand">
+                    <div class="logo-icon large orange"><i class="fas fa-shield-alt"></i></div>
+                    <h2>Admin Panel</h2>
+                    <p>Master Control Center</p>
+                </div>
+                <div class="auth-features">
+                    <div class="auth-feature-item"><i class="fas fa-check-circle"></i> Manage Doctors & Staff</div>
+                    <div class="auth-feature-item"><i class="fas fa-check-circle"></i> View All Appointments</div>
+                    <div class="auth-feature-item"><i class="fas fa-check-circle"></i> Financial Reports</div>
+                    <div class="auth-feature-item"><i class="fas fa-check-circle"></i> System Configuration</div>
+                </div>
+                <div class="restriction-notice orange">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p>Unauthorized access is strictly prohibited and will be logged and reported.</p>
+                </div>
+            </div>
+            <div class="auth-right">
+                <button class="back-btn" onclick="showPage('home')"><i class="fas fa-arrow-left"></i> Back to Home</button>
+                <div class="auth-form active">
+                    <h2>Admin Authentication</h2>
+                    <p class="auth-subtitle">Restricted to authorized administrators only</p>
+                    <div class="notice-banner danger"><i class="fas fa-exclamation-circle"></i> High-Security Zone — All login attempts are monitored and logged.</div>
+                    <div class="form-group">
+                        <label>Admin Username</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-user-shield"></i>
+                            <input type="text" placeholder="Enter admin username">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Admin Password</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-key"></i>
+                            <input type="password" placeholder="Enter admin password" id="adminPass">
+                            <i class="fas fa-eye toggle-pass" onclick="togglePass('adminPass')"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>2FA Code</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-mobile-alt"></i>
+                            <input type="text" placeholder="Enter 6-digit 2FA code">
+                        </div>
+                    </div>
+                    <button class="btn btn-orange full-width" onclick="showPage('admin-dashboard')">Access Admin Panel <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== PATIENT DASHBOARD ==================== -->
+    <div id="page-patient-dashboard" class="page">
+        <div class="dashboard-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar patient-sidebar">
+                <div class="sidebar-brand">
+                    <div class="logo-icon small"><i class="fas fa-heartbeat"></i></div>
+                    <span>MediCare Pro</span>
+                </div>
+                <div class="sidebar-user">
+                    <div class="user-avatar">JD</div>
+                    <div class="user-info">
+                        <strong>Jane Doe</strong>
+                        <span>Patient</span>
+                    </div>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#" class="sidebar-link active" onclick="showDashSection('dash-overview', this)"><i class="fas fa-th-large"></i> Overview</a>
+                    <a href="#" class="sidebar-link" onclick="showDashSection('dash-booking', this)"><i class="fas fa-calendar-plus"></i> Book Appointment</a>
+                    <a href="#" class="sidebar-link" onclick="showDashSection('dash-appointments', this)"><i class="fas fa-calendar-alt"></i> My Appointments</a>
+                    <a href="#" class="sidebar-link" onclick="showDashSection('dash-prescriptions', this)"><i class="fas fa-prescription"></i> Prescriptions</a>
+                    <a href="#" class="sidebar-link" onclick="showPage('pharmacy')"><i class="fas fa-map-marker-alt"></i> Find Pharmacy</a>
+                    <a href="#" class="sidebar-link" onclick="showDashSection('dash-profile', this)"><i class="fas fa-user"></i> My Profile</a>
+                </nav>
+                <div class="sidebar-footer">
+                    <a href="#" onclick="showPage('home')" class="sidebar-link logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="dashboard-main">
+                <div class="dashboard-header">
+                    <div>
+                        <h1>Good morning, Jane! 👋</h1>
+                        <p>Here's your health summary for today.</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn btn-primary" onclick="showDashSection('dash-booking', null)"><i class="fas fa-plus"></i> Book Appointment</button>
+                    </div>
+                </div>
+
+                <!-- Overview Section -->
+                <div id="dash-overview" class="dash-section active">
+                    <div class="stats-row">
+                        <div class="stat-card blue">
+                            <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value">3</span>
+                                <span class="stat-label">Upcoming Appointments</span>
+                            </div>
+                        </div>
+                        <div class="stat-card green">
+                            <div class="stat-icon"><i class="fas fa-prescription"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value">5</span>
+                                <span class="stat-label">Active Prescriptions</span>
+                            </div>
+                        </div>
+                        <div class="stat-card orange">
+                            <div class="stat-icon"><i class="fas fa-history"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value">12</span>
+                                <span class="stat-label">Past Visits</span>
+                            </div>
+                        </div>
+                        <div class="stat-card purple">
+                            <div class="stat-icon"><i class="fas fa-pills"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value">2</span>
+                                <span class="stat-label">Medications Due</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dash-grid-2">
+                        <div class="dash-card">
+                            <div class="card-header">
+                                <h3>Upcoming Appointments</h3>
+                                <button class="btn-sm btn-primary" onclick="showDashSection('dash-booking', null)">+ New</button>
+                            </div>
+                            <div class="appointment-list">
+                                <div class="appointment-item">
+                                    <div class="apt-color blue"></div>
+                                    <div class="apt-info">
+                                        <strong>Dr. Sarah Johnson</strong>
+                                        <span>Cardiology</span>
+                                    </div>
+                                    <div class="apt-time">
+                                        <strong>Today</strong>
+                                        <span>2:30 PM</span>
+                                    </div>
+                                    <span class="badge badge-confirmed">Confirmed</span>
+                                </div>
+                                <div class="appointment-item">
+                                    <div class="apt-color green"></div>
+                                    <div class="apt-info">
+                                        <strong>Dr. Michael Chen</strong>
+                                        <span>Dentistry</span>
+                                    </div>
+                                    <div class="apt-time">
+                                        <strong>Dec 18</strong>
+                                        <span>10:00 AM</span>
+                                    </div>
+                                    <span class="badge badge-pending">Pending</span>
+                                </div>
+                                <div class="appointment-item">
+                                    <div class="apt-color orange"></div>
+                                    <div class="apt-info">
+                                        <strong>Dr. Emily Rodriguez</strong>
+                                        <span>Neurology</span>
+                                    </div>
+                                    <div class="apt-time">
+                                        <strong>Dec 22</strong>
+                                        <span>3:00 PM</span>
+                                    </div>
+                                    <span class="badge badge-confirmed">Confirmed</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dash-card">
+                            <div class="card-header">
+                                <h3>Recent Prescriptions</h3>
+                            </div>
+                            <div class="prescription-list">
+                                <div class="prescription-item">
+                                    <div class="rx-icon"><i class="fas fa-pills"></i></div>
+                                    <div class="rx-info">
+                                        <strong>Atorvastatin 20mg</strong>
+                                        <span>Dr. Johnson • 1x Daily</span>
+                                    </div>
+                                    <span class="badge badge-active">Active</span>
+                                </div>
+                                <div class="prescription-item">
+                                    <div class="rx-icon"><i class="fas fa-capsules"></i></div>
+                                    <div class="rx-info">
+                                        <strong>Amoxicillin 500mg</strong>
+                                        <span>Dr. Chen • 3x Daily</span>
+                                    </div>
+                                    <span class="badge badge-active">Active</span>
+                                </div>
+                                <div class="prescription-item">
+                                    <div class="rx-icon"><i class="fas fa-tablets"></i></div>
+                                    <div class="rx-info">
+                                        <strong>Metformin 850mg</strong>
+                                        <span>Dr. Rodriguez • 2x Daily</span>
+                                    </div>
+                                    <span class="badge badge-completed">Completed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Section -->
+                <div id="dash-booking" class="dash-section">
+                    <div class="booking-wizard">
+                        <div class="wizard-header">
+                            <h2>Book an Appointment</h2>
+                            <p>Follow the steps below to schedule your visit</p>
+                        </div>
+                        <div class="wizard-steps">
+                            <div class="wizard-step active" id="step-indicator-1">
+                                <div class="step-circle">1</div>
+                                <span>Select Doctor</span>
+                            </div>
+                            <div class="wizard-line"></div>
+                            <div class="wizard-step" id="step-indicator-2">
+                                <div class="step-circle">2</div>
+                                <span>Choose Time</span>
+                            </div>
+                            <div class="wizard-line"></div>
+                            <div class="wizard-step" id="step-indicator-3">
+                                <div class="step-circle">3</div>
+                                <span>Payment</span>
+                            </div>
+                            <div class="wizard-line"></div>
+                            <div class="wizard-step" id="step-indicator-4">
+                                <div class="step-circle">4</div>
+                                <span>Confirmation</span>
+                            </div>
+                        </div>
+
+                        <!-- Step 1: Select Doctor -->
+                        <div id="booking-step-1" class="booking-step active">
+                            <h3>Step 1: Choose Your Doctor</h3>
+                            <div class="search-bar">
+                                <i class="fas fa-search"></i>
+                                <input type="text" placeholder="Search doctors by name or specialty...">
+                            </div>
+                            <div class="doctor-grid booking-doctors">
+                                <div class="doctor-card selectable" onclick="selectDoctor(this)">
+                                    <div class="doctor-avatar-sm">SJ</div>
+                                    <div class="doctor-details">
+                                        <strong>Dr. Sarah Johnson</strong>
+                                        <span class="specialty-tag">Cardiology</span>
+                                        <div class="rating"><i class="fas fa-star"></i> 4.9 (120 reviews)</div>
+                                    </div>
+                                    <div class="doctor-fee">\$150<small>/visit</small></div>
+                                </div>
+                                <div class="doctor-card selectable" onclick="selectDoctor(this)">
+                                    <div class="doctor-avatar-sm mc">MC</div>
+                                    <div class="doctor-details">
+                                        <strong>Dr. Michael Chen</strong>
+                                        <span class="specialty-tag dentistry">Dentistry</span>
+                                        <div class="rating"><i class="fas fa-star"></i> 4.8 (98 reviews)</div>
+                                    </div>
+                                    <div class="doctor-fee">\$120<small>/visit</small></div>
+                                </div>
+                                <div class="doctor-card selectable" onclick="selectDoctor(this)">
+                                    <div class="doctor-avatar-sm er">ER</div>
+                                    <div class="doctor-details">
+                                        <strong>Dr. Emily Rodriguez</strong>
+                                        <span class="specialty-tag neuro">Neurology</span>
+                                        <div class="rating"><i class="fas fa-star"></i> 4.7 (85 reviews)</div>
+                                    </div>
+                                    <div class="doctor-fee">\$180<small>/visit</small></div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" onclick="nextStep(2)" style="margin-top:1rem">Next: Choose Time <i class="fas fa-arrow-right"></i></button>
+                        </div>
+
+                        <!-- Step 2: Choose Time -->
+                        <div id="booking-step-2" class="booking-step">
+                            <h3>Step 2: Select Date & Time</h3>
+                            <div class="time-selection">
+                                <div class="calendar-mini">
+                                    <div class="cal-header">
+                                        <button><i class="fas fa-chevron-left"></i></button>
+                                        <span>December 2024</span>
+                                        <button><i class="fas fa-chevron-right"></i></button>
+                                    </div>
+                                    <div class="cal-grid">
+                                        <span class="cal-day-name">Su</span><span class="cal-day-name">Mo</span><span class="cal-day-name">Tu</span><span class="cal-day-name">We</span><span class="cal-day-name">Th</span><span class="cal-day-name">Fr</span><span class="cal-day-name">Sa</span>
+                                        <span class="cal-day disabled">1</span><span class="cal-day disabled">2</span><span class="cal-day disabled">3</span><span class="cal-day disabled">4</span><span class="cal-day disabled">5</span><span class="cal-day disabled">6</span><span class="cal-day disabled">7</span>
+                                        <span class="cal-day disabled">8</span><span class="cal-day disabled">9</span><span class="cal-day disabled">10</span><span class="cal-day disabled">11</span><span class="cal-day disabled">12</span><span class="cal-day disabled">13</span><span class="cal-day disabled">14</span>
+                                        <span class="cal-day active" onclick="selectDate(this)">15</span><span class="cal-day" onclick="selectDate(this)">16</span><span class="cal-day" onclick="selectDate(this)">17</span><span class="cal-day" onclick="selectDate(this)">18</span><span class="cal-day" onclick="selectDate(this)">19</span><span class="cal-day unavailable">20</span><span class="cal-day unavailable">21</span>
+                                        <span class="cal-day" onclick="selectDate(this)">22</span><span class="cal-day" onclick="selectDate(this)">23</span><span class="cal-day" onclick="selectDate(this)">24</span><span class="cal-day" onclick="selectDate(this)">25</span><span class="cal-day" onclick="selectDate(this)">26</span><span class="cal-day" onclick="selectDate(this)">27</span><span class="cal-day" onclick="selectDate(this)">28</span>
+                                    </div>
+                                </div>
+                                <div class="time-slots-container">
+                                    <h4>Available Time Slots</h4>
+                                    <div class="time-slots">
+                                        <div class="time-slot" onclick="selectTime(this)">9:00 AM</div>
+                                        <div class="time-slot" onclick="selectTime(this)">9:30 AM</div>
+                                        <div class="time-slot taken">10:00 AM</div>
+                                        <div class="time-slot" onclick="selectTime(this)">10:30 AM</div>
+                                        <div class="time-slot" onclick="selectTime(this)">11:00 AM</div>
+                                        <div class="time-slot taken">11:30 AM</div>
+                                        <div class="time-slot" onclick="selectTime(this)">2:00 PM</div>
+                                        <div class="time-slot" onclick="selectTime(this)">2:30 PM</div>
+                                        <div class="time-slot" onclick="selectTime(this)">3:00 PM</div>
+                                        <div class="time-slot" onclick="selectTime(this)">3:30 PM</div>
+                                    </div>
+                                    <div class="slot-legend">
+                                        <span class="legend-item available">Available</span>
+                                        <span class="legend-item selected-legend">Selected</span>
+                                        <span class="legend-item taken-legend">Taken</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step-actions">
+                                <button class="btn btn-outline" onclick="nextStep(1)"><i class="fas fa-arrow-left"></i> Back</button>
+                                <button class="btn btn-primary" onclick="nextStep(3)">Next: Payment <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Payment -->
+                        <div id="booking-step-3" class="booking-step">
+                            <h3>Step 3: Choose Payment Method</h3>
+                            <div class="appointment-summary">
+                                <h4>Appointment Summary</h4>
+                                <div class="summary-row"><span>Doctor:</span><strong>Dr. Sarah Johnson (Cardiology)</strong></div>
+                                <div class="summary-row"><span>Date:</span><strong>December 15, 2024</strong></div>
+                                <div class="summary-row"><span>Time:</span><strong>9:00 AM</strong></div>
+                                <div class="summary-row total"><span>Total Amount:</span><strong>\$150.00</strong></div>
+                            </div>
+                            <div class="payment-options">
+                                <div class="payment-option active" id="pay-online" onclick="selectPayment('online')">
+                                    <div class="payment-radio"><div class="radio-dot"></div></div>
+                                    <div class="payment-icon"><i class="fas fa-credit-card"></i></div>
+                                    <div class="payment-info">
+                                        <strong>Pay Online</strong>
+                                        <span>Credit/Debit Card, Apple Pay, Google Pay</span>
+                                    </div>
+                                    <div class="payment-badge">Recommended</div>
+                                </div>
+                                <div class="payment-option" id="pay-cash" onclick="selectPayment('cash')">
+                                    <div class="payment-radio"></div>
+                                    <div class="payment-icon cash"><i class="fas fa-money-bill-wave"></i></div>
+                                    <div class="payment-info">
+                                        <strong>Pay at Clinic</strong>
+                                        <span>Cash payment on arrival</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="card-form" class="card-form">
+                                <div class="form-group">
+                                    <label>Card Number</label>
+                                    <div class="input-wrapper">
+                                        <i class="fas fa-credit-card"></i>
+                                        <input type="text" placeholder="1234 5678 9012 3456">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Expiry Date</label>
+                                        <div class="input-wrapper">
+                                            <i class="fas fa-calendar"></i>
+                                            <input type="text" placeholder="MM/YY">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>CVV</label>
+                                        <div class="input-wrapper">
+                                            <i class="fas fa-lock"></i>
+                                            <input type="text" placeholder="123">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step-actions">
+                                <button class="btn btn-outline" onclick="nextStep(2)"><i class="fas fa-arrow-left"></i> Back</button>
+                                <button class="btn btn-primary" onclick="nextStep(4)">Confirm Booking <i class="fas fa-check"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Confirmation -->
+                        <div id="booking-step-4" class="booking-step">
+                            <div class="confirmation-screen">
+                                <div class="confirm-icon"><i class="fas fa-check-circle"></i></div>
+                                <h2>Appointment Confirmed!</h2>
+                                <p>Your appointment has been successfully booked. A confirmation email has been sent to your registered email address.</p>
+                                <div class="confirm-details">
+                                    <div class="confirm-row"><i class="fas fa-user-md"></i><span>Dr. Sarah Johnson — Cardiology</span></div>
+                                    <div class="confirm-row"><i class="fas fa-calendar"></i><span>December 15, 2024 at 9:00 AM</span></div>
+                                    <div class="confirm-row"><i class="fas fa-map-marker-alt"></i><span>MediCare Pro Clinic — Room 204</span></div>
+                                    <div class="confirm-row"><i class="fas fa-credit-card"></i><span>Payment: Online — \$150.00</span></div>
+                                </div>
+                                <div class="confirm-actions">
+                                    <button class="btn btn-outline" onclick="showDashSection('dash-appointments', null)">View Appointments</button>
+                                    <button class="btn btn-primary" onclick="resetBooking()">Book Another</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Appointments Section -->
+                <div id="dash-appointments" class="dash-section">
+                    <div class="card-header-row">
+                        <h2>My Appointments</h2>
+                        <button class="btn btn-primary" onclick="showDashSection('dash-booking', null)"><i class="fas fa-plus"></i> Book New</button>
+                    </div>
+                    <div class="tabs">
+                        <button class="tab active" onclick="switchTab(this, 'tab-upcoming')">Upcoming</button>
+                        <button class="tab" onclick="switchTab(this, 'tab-past')">Past</button>
+                    </div>
+                    <div id="tab-upcoming" class="tab-content active">
+                        <div class="appointments-table-wrapper">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Doctor</th>
+                                        <th>Specialty</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                        <th>Payment</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><div class="table-doctor"><div class="avatar-mini">SJ</div>Dr. Sarah Johnson</div></td>
+                                        <td>Cardiology</td>
+                                        <td>Dec 15, 2024</td>
+                                        <td>2:30 PM</td>
+                                        <td><span class="badge badge-paid">Paid Online</span></td>
+                                        <td><span class="badge badge-confirmed">Confirmed</span></td>
+                                        <td><button class="btn-sm btn-danger" onclick="cancelAppointment(this)">Cancel</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="table-doctor"><div class="avatar-mini mc">MC</div>Dr. Michael Chen</div></td>
+                                        <td>Dentistry</td>
+                                        <td>Dec 18, 2024</td>
+                                        <td>10:00 AM</td>
+                                        <td><span class="badge badge-cash">Pay at Clinic</span></td>
+                                        <td><span class="badge badge-pending">Pending</span></td>
+                                        <td><button class="btn-sm btn-danger" onclick="cancelAppointment(this)">Cancel</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="tab-past" class="tab-content">
+                        <div class="appointments-table-wrapper">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Doctor</th>
+                                        <th>Specialty</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                        <th>Payment</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><div class="table-doctor"><div class="avatar-mini er">ER</div>Dr. Emily Rodriguez</div></td>
+                                        <td>Neurology</td>
+                                        <td>Nov 10, 2024</td>
+                                        <td>3:00 PM</td>
+                                        <td><span class="badge badge-paid">Paid Online</span></td>
+                                        <td><span class="badge badge-completed">Completed</span></td>
+                                        <td><button class="btn-sm btn-primary">View Rx</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prescriptions Section -->
+                <div id="dash-prescriptions" class="dash-section">
+                    <h2>My Prescriptions</h2>
+                    <div class="prescriptions-grid">
+                        <div class="prescription-card">
+                            <div class="rx-card-header">
+                                <div class="rx-symbol">℞</div>
+                                <div class="rx-meta">
+                                    <strong>Dr. Sarah Johnson</strong>
+                                    <span>Cardiology • November 10, 2024</span>
+                                </div>
+                                <span class="badge badge-active">Active</span>
+                            </div>
+                            <div class="rx-medicines">
+                                <div class="medicine-item">
+                                    <i class="fas fa-pills"></i>
+                                    <div class="medicine-info">
+                                        <strong>Atorvastatin 20mg</strong>
+                                        <span>1 tablet once daily at bedtime • Duration: 3 months</span>
+                                    </div>
+                                </div>
+                                <div class="medicine-item">
+                                    <i class="fas fa-tablets"></i>
+                                    <div class="medicine-info">
+                                        <strong>Aspirin 81mg</strong>
+                                        <span>1 tablet once daily with food • Duration: Ongoing</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rx-notes">
+                                <i class="fas fa-sticky-note"></i>
+                                <p>Avoid grapefruit juice. Return for follow-up in 3 months. Contact immediately if chest pain occurs.</p>
+                            </div>
+                            <button class="btn btn-outline btn-sm-full"><i class="fas fa-download"></i> Download PDF</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Section -->
+                <div id="dash-profile" class="dash-section">
+                    <h2>My Profile</h2>
+                    <div class="profile-grid">
+                        <div class="profile-card">
+                            <div class="profile-avatar-lg">JD</div>
+                            <h3>Jane Doe</h3>
+                            <p>Patient ID: PAT-00123</p>
+                            <button class="btn btn-outline">Change Photo</button>
+                        </div>
+                        <div class="profile-form">
+                            <div class="form-section">
+                                <h4>Personal Information</h4>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>First Name</label>
+                                        <div class="input-wrapper"><i class="fas fa-user"></i><input type="text" value="Jane"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Last Name</label>
+                                        <div class="input-wrapper"><i class="fas fa-user"></i><input type="text" value="Doe"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <div class="input-wrapper"><i class="fas fa-envelope"></i><input type="email" value="jane.doe@email.com"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone</label>
+                                    <div class="input-wrapper"><i class="fas fa-phone"></i><input type="tel" value="+1 (555) 123-4567"></div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Date of Birth</label>
+                                        <div class="input-wrapper"><i class="fas fa-birthday-cake"></i><input type="date" value="1990-05-15"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Blood Type</label>
+                                        <div class="input-wrapper"><i class="fas fa-tint"></i>
+                                            <select><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>O+</option><option>O-</option></select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary">Save Changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- ==================== DOCTOR DASHBOARD ==================== -->
+    <div id="page-doctor-dashboard" class="page">
+        <div class="dashboard-layout">
+            <aside class="sidebar doctor-sidebar">
+                <div class="sidebar-brand teal">
+                    <div class="logo-icon small teal-icon"><i class="fas fa-stethoscope"></i></div>
+                    <span>Doctor Portal</span>
+                </div>
+                <div class="sidebar-user">
+                    <div class="user-avatar teal-avatar">SJ</div>
+                    <div class="user-info">
+                        <strong>Dr. Sarah Johnson</strong>
+                        <span>Cardiologist</span>
+                    </div>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#" class="sidebar-link active" onclick="showDocSection('doc-schedule', this)"><i class="fas fa-calendar-day"></i> Today's Schedule</a>
+                    <a href="#" class="sidebar-link" onclick="showDocSection('doc-availability', this)"><i class="fas fa-clock"></i> Availability Manager</a>
+                    <a href="#" class="sidebar-link" onclick="showDocSection('doc-patients', this)"><i class="fas fa-users"></i> Patient List</a>
+                    <a href="#" class="sidebar-link" onclick="showDocSection('doc-prescriptions', this)"><i class="fas fa-prescription"></i> Write Prescription</a>
+                </nav>
+                <div class="sidebar-footer">
+                    <a href="#" onclick="showPage('home')" class="sidebar-link logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </aside>
+            <main class="dashboard-main">
+                <div class="dashboard-header teal-header">
+                    <div>
+                        <h1>Good Morning, Dr. Johnson! 👋</h1>
+                        <p>You have <strong>8 patients</strong> scheduled for today.</p>
+                    </div>
+                    <div class="header-actions">
+                        <div class="date-badge"><i class="fas fa-calendar"></i> December 15, 2024</div>
+                    </div>
+                </div>
+
+                <!-- Doctor: Today's Schedule -->
+                <div id="doc-schedule" class="dash-section active">
+                    <div class="stats-row">
+                        <div class="stat-card teal">
+                            <div class="stat-icon"><i class="fas fa-user-injured"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value">8</span>
+                                <span class="stat-label">Today's Patients</span>
+                            </div>
+                        </div>
+                        <div class="stat-card blue">
+                            <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value">3</span>
+                                <span class="stat-label">Completed</span>
+                            </div>
+                        </div>
+                        <div class="stat-card orange">
+                            <div class="stat-icon"><i class="fas fa-hourglass-half"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value">5</span>
+                                <span class="stat-label">Remaining</span>
+                            </div>
+                        </div>
+                        <div class="stat-card green">
+                            <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value">2:30</span>
+                                <span class="stat-label">Avg. Visit (min)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dash-card">
+                        <div class="card-header">
+                            <h3>Patient Queue — Today</h3>
+                            <div class="queue-legend">
+                                <span class="legend-dot green"></span>Completed
+                                <span class="legend-dot blue"></span>In Progress
+                                <span class="legend-dot orange"></span>Waiting
+                            </div>
+                        </div>
+                        <div class="patient-queue">
+                            <div class="queue-item completed">
+                                <div class="queue-number">01</div>
+                                <div class="queue-avatar">MK</div>
+                                <div class="queue-info">
+                                    <strong>Mohammed Khalid</strong>
+                                    <span>9:00 AM — Follow-up Checkup</span>
+                                </div>
+                                <div class="queue-status"><span class="badge badge-completed">Done</span></div>
+                                <button class="btn-sm btn-primary" onclick="showDocSection('doc-prescriptions', null)">View RX</button>
+                            </div>
+                            <div class="queue-item completed">
+                                <div class="queue-number">02</div>
+                                <div class="queue-avatar">LA">LA</div>
+                                <div class="queue-info">
+                                    <strong>Linda Adkins</strong>
+                                    <span>9:30 AM — ECG Reading</span>
+                                </div>
+                                <div class="queue-status"><span class="badge badge-completed">Done</span></div>
+                                <button class="btn-sm btn-primary" onclick="showDocSection('doc-prescriptions', null)">View RX</button>
+                            </div>
+                            <div class="queue-item completed">
+                                <div class="queue-number">03</div>
+                                <div class="queue-avatar">TR">TR</div>
+                                <div class="queue-info">
+                                    <strong>Thomas Reed</strong>
+                                    <span>10:00 AM — New Patient</span>
+                                </div>
+                                <div class="queue-status"><span class="badge badge-completed">Done</span></div>
+                                <button class="btn-sm btn-primary" onclick="showDocSection('doc-prescriptions', null)">View RX</button>
+                            </div>
+                            <div class="queue-item in-progress">
+                                <div class="queue-number">04</div>
+                                <div class="queue-avatar current">JD</div>
+                                <div class="queue-info">
+                                    <strong>Jane Doe</strong>
+                                    <span>2:30 PM — Consultation</span>
+                                </div>
+                                <div class="queue-status"><span class="badge badge-inprogress">In Progress</span></div>
+                                <button class="btn-sm btn-teal" onclick="showDocSection('doc-prescriptions', null)">Consult</button>
+                            </div>
+                            <div class="queue-item waiting">
+                                <div class="queue-number">05</div>
+                                <div class="queue-avatar waiting-av">SP</div>
+                                <div class="queue-info">
+                                    <strong>Sara Peters</strong>
+                                    <span>3:00 PM — Chest Pain Evaluation</span>
+                                </div>
+                                <div class="queue-status"><span class="badge badge-pending">Waiting</span></div>
+                                <button class="btn-sm btn-outline">Start</button>
+                            </div>
+                            <div class="queue-item waiting">
+                                <div class="queue-number">06</div>
+                                <div class="queue-avatar waiting-av">BN</div>
+                                <div class="queue-info">
+                                    <strong>Brian Norton</strong>
+                                    <span>3:30 PM — Blood Pressure Check</span>
+                                </div>
+                                <div class="queue-status"><span class="badge badge-pending">Waiting</span></div>
+                                <button class="btn-sm btn-outline">Start</button>
+                            </div>
+                            <div class="queue-item waiting">
+                                <div class="queue-number">07</div>
+                                <div class="queue-avatar waiting-av">CM</div>
+                                <div class="queue-info">
+                                    <strong>Carol Mitchell</strong>
+                                    <span>4:00 PM — Stress Test Review</span>
+                                </div>
+                                <div class="queue-status"><span class="badge badge-pending">Waiting</span></div>
+                                <button class="btn-sm btn-outline">Start</button>
+                            </div>
+                            <div class="queue-item waiting">
+                                <div class="queue-number">08</div>
+                                <div class="queue-avatar waiting-av">RP</div>
+                                <div class="queue-info">
+                                    <strong>Robert Patel</strong>
+                                    <span>4:30 PM — Holter Monitor Results</span>
+                                </div>
+                                <div class="queue-status"><span class="badge badge-pending">Waiting</span></div>
+                                <button class="btn-sm btn-outline">Start</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doctor: Availability Manager -->
+                <div id="doc-availability" class="dash-section">
+                    <h2>Availability Manager</h2>
+                    <p class="section-desc">Set your working hours for each day of the week. Patients can only book during your available slots.</p>
+                    <div class="availability-grid">
+                        <div class="availability-card">
+                            <div class="avail-day-header">
+                                <div class="day-toggle">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" checked onchange="toggleDay(this, 'monday')">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                    <span class="day-name">Monday</span>
+                                </div>
+                                <span class="avail-badge active">Active</span>
+                            </div>
+                            <div class="avail-times" id="monday-times">
+                                <div class="time-range-row">
+                                    <div class="time-input-group">
+                                        <label>From</label>
+                                        <input type="time" value="09:00" class="time-input">
+                                    </div>
+                                    <span class="time-separator">→</span>
+                                    <div class="time-input-group">
+                                        <label>To</label>
+                                        <input type="time" value="13:00" class="time-input">
+                                    </div>
+                                    <button class="btn-icon remove"><i class="fas fa-minus-circle"></i></button>
+                                </div>
+                                <div class="time-range-row">
+                                    <div class="time-input-group">
+                                        <label>From</label>
+                                        <input type="time" value="14:00" class="time-input">
+                                    </div>
+                                    <span class="time-separator">→</span>
+                                    <div class="time-input-group">
+                                        <label>To</label>
+                                        <input type="time" value="17:00" class="time-input">
+                                    </div>
+                                    <button class="btn-icon remove"><i class="fas fa-minus-circle"></i></button>
+                                </div>
+                                <button class="add-slot-btn"><i class="fas fa-plus"></i> Add Time Slot</button>
+                            </div>
+                        </div>
+
+                        <div class="availability-card">
+                            <div class="avail-day-header">
+                                <div class="day-toggle">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" onchange="toggleDay(this, 'tuesday')">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                    <span class="day-name">Tuesday</span>
+                                </div>
+                                <span class="avail-badge inactive">Day Off</span>
+                            </div>
+                            <div class="avail-times disabled" id="tuesday-times">
+                                <p class="day-off-msg"><i class="fas fa-moon"></i> You are off on this day</p>
+                            </div>
+                        </div>
+
+                        <div class="availability-card">
+                            <div class="avail-day-header">
+                                <div class="day-toggle">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" checked onchange="toggleDay(this, 'wednesday')">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                    <span class="day-name">Wednesday</span>
+                                </div>
+                                <span class="avail-badge active">Active</span>
+                            </div>
+                            <div class="avail-times" id="wednesday-times">
+                                <div class="time-range-row">
+                                    <div class="time-input-group">
+                                        <label>From</label>
+                                        <input type="time" value="10:00" class="time-input">
+                                    </div>
+                                    <span class="time-separator">→</span>
+                                    <div class="time-input-group">
+                                        <label>To</label>
+                                        <input type="time" value="14:00" class="time-input">
+                                    </div>
+                                    <button class="btn-icon remove"><i class="fas fa-minus-circle"></i></button>
+                                </div>
+                                <button class="add-slot-btn"><i class="fas fa-plus"></i> Add Time Slot</button>
+                            </div>
+                        </div>
+
+                        <div class="availability-card">
+                            <div class="avail-day-header">
+                                <div class="day-toggle">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" checked onchange="toggleDay(this, 'thursday')">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                    <span class="day-name">Thursday</span>
+                                </div>
+                                <span class="avail-badge active">Active</span>
+                            </div>
+                            <div class="avail-times" id="thursday-times">
+                                <div class="time-range-row">
+                                    <div class="time-input-group">
+                                        <label>From</label>
+                                        <input type="time" value="09:00" class="time-input">
+                                    </div>
+                                    <span class="time-separator">→</span>
+                                    <div class="time-input-group">
+                                        <label>To</label>
+                                        <input type="time" value="12:00" class="time-input">
+                                    </div>
+                                    <button class="btn-icon remove"><i class="fas fa-minus-circle"></i></button>
+                                </div>
+                                <button class="add-slot-btn"><i class="fas fa-plus"></i> Add Time Slot</button>
+                            </div>
+                        </div>
+
+                        <div class="availability-card">
+                            <div class="avail-day-header">
+                                <div class="day-toggle">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" onchange="toggleDay(this, 'friday')">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                    <span class="day-name">Friday</span>
+                                </div>
+                                <span class="avail-badge inactive">Day Off</span>
+                            </div>
+                            <div class="avail-times disabled" id="friday-times">
+                                <p class="day-off-msg"><i class="fas fa-moon"></i> You are off on this day</p>
+                            </div>
+                        </div>
+
+                        <div class="availability-card">
+                            <div class="avail-day-header">
+                                <div class="day-toggle">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" checked onchange="toggleDay(this, 'saturday')">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                    <span class="day-name">Saturday</span>
+                                </div>
+                                <span class="avail-badge active">Active</span>
+                            </div>
+                            <div class="avail-times" id="saturday-times">
+                                <div class="time-range-row">
+                                    <div class="time-input-group">
+                                        <label>From</label>
+                                        <input type="time" value="10:00" class="time-input">
+                                    </div>
+                                    <span class="time-separator">→</span>
+                                    <div class="time-input-group">
+                                        <label>To</label>
+                                        <input type="time" value="14:00" class="time-input">
+                                    </div>
+                                    <button class="btn-icon remove"><i class="fas fa-minus-circle"></i></button>
+                                </div>
+                                <button class="add-slot-btn"><i class="fas fa-plus"></i> Add Time Slot</button>
+                            </div>
+                        </div>
+
+                        <div class="availability-card">
+                            <div class="avail-day-header">
+                                <div class="day-toggle">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" onchange="toggleDay(this, 'sunday')">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                    <span class="day-name">Sunday</span>
+                                </div>
+                                <span class="avail-badge inactive">Day Off</span>
+                            </div>
+                            <div class="avail-times disabled" id="sunday-times">
+                                <p class="day-off-msg"><i class="fas fa-moon"></i> You are off on this day</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="avail-actions">
+                        <button class="btn btn-outline">Reset to Default</button>
+                        <button class="btn btn-teal" onclick="showToast('Availability saved successfully!')"><i class="fas fa-save"></i> Save Availability</button>
+                    </div>
+                </div>
+
+                <!-- Doctor: Patient List -->
+                <div id="doc-patients" class="dash-section">
+                    <div class="card-header-row">
+                        <h2>Patient List</h2>
+                        <div class="search-bar compact">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search patients...">
+                        </div>
+                    </div>
+                    <div class="dash-card">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Patient</th>
+                                    <th>Age</th>
+                                    <th>Last Visit</th>
+                                    <th>Diagnosis</th>
+                                    <th>Prescriptions</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="table-doctor"><div class="avatar-mini">JD</div>Jane Doe</div></td>
+                                    <td>34</td>
+                                    <td>Dec 15, 2024</td>
+                                    <td>Hypertension</td>
+                                    <td>2 Active</td>
+                                    <td>
+                                        <button class="btn-sm btn-primary" onclick="showDocSection('doc-prescriptions', null)">Write RX</button>
+                                        <button class="btn-sm btn-outline">History</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><div class="table-doctor"><div class="avatar-mini">MK</div>Mohammed Khalid</div></td>
+                                    <td>52</td>
+                                    <td>Dec 15, 2024</td>
+                                    <td>Coronary Artery Disease</td>
+                                    <td>3 Active</td>
+                                    <td>
+                                        <button class="btn-sm btn-primary" onclick="showDocSection('doc-prescriptions', null)">Write RX</button>
+                                        <button class="btn-sm btn-outline">History</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><div class="table-doctor"><div class="avatar-mini">LA</div>Linda Adkins</div></td>
+                                    <td>61</td>
+                                    <td>Dec 15, 2024</td>
+                                    <td>Arrhythmia</td>
+                                    <td>1 Active</td>
+                                    <td>
+                                        <button class="btn-sm btn-primary" onclick="showDocSection('doc-prescriptions', null)">Write RX</button>
+                                        <button class="btn-sm btn-outline">History</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Doctor: Write Prescription -->
+                <div id="doc-prescriptions" class="dash-section">
+                    <h2>Clinical View & Prescription Writer</h2>
+                    <div class="clinical-layout">
+                        <div class="patient-history-panel">
+                            <div class="dash-card">
+                                <h3><i class="fas fa-user-injured"></i> Patient: Jane Doe</h3>
+                                <div class="patient-vitals">
+                                    <div class="vital-item">
+                                        <i class="fas fa-heartbeat"></i>
+                                        <div><strong>72 bpm</strong><span>Heart Rate</span></div>
+                                    </div>
+                                    <div class="vital-item">
+                                        <i class="fas fa-tachometer-alt"></i>
+                                        <div><strong>120/80</strong><span>Blood Pressure</span></div>
+                                    </div>
+                                    <div class="vital-item">
+                                        <i class="fas fa-thermometer-half"></i>
+                                        <div><strong>98.6°F</strong><span>Temperature</span></div>
+                                    </div>
+                                    <div class="vital-item">
+                                        <i class="fas fa-lungs"></i>
+                                        <div><strong>98%</strong><span>O2 Saturation</span></div>
+                                    </div>
+                                </div>
+                                <div class="history-section">
+                                    <h4>Medical History</h4>
+                                    <div class="history-tags">
+                                        <span class="history-tag">Hypertension</span>
+                                        <span class="history-tag">Type 2 Diabetes</span>
+                                        <span class="history-tag">Hyperlipidemia</span>
+                                    </div>
+                                </div>
+                                <div class="history-section">
+                                    <h4>Allergies</h4>
+                                    <div class="history-tags">
+                                        <span class="history-tag danger">Penicillin</span>
+                                        <span class="history-tag danger">Sulfa Drugs</span>
+                                    </div>
+                                </div>
+                                <div class="history-section">
+                                    <h4>Previous Visits</h4>
+                                    <div class="visit-timeline">
+                                        <div class="visit-item"><span class="visit-date">Nov 10, 2024</span><span>Follow-up — BP Control</span></div>
+                                        <div class="visit-item"><span class="visit-date">Oct 5, 2024</span><span>ECG — Normal Sinus</span></div>
+                                        <div class="visit-item"><span class="visit-date">Sep 1, 2024</span><span>Initial Consult — HTN Dx</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="prescription-writer-panel">
+                            <div class="dash-card">
+                                <div class="rx-writer-header">
+                                    <div class="rx-symbol large">℞</div>
+                                    <div>
+                                        <h3>New Prescription</h3>
+                                        <p>Dr. Sarah Johnson — Cardiology</p>
+                                        <p>Dec 15, 2024</p>
+                                    </div>
+                                </div>
+                                <div class="diagnosis-section">
+                                    <label>Chief Complaint / Diagnosis</label>
+                                    <textarea class="rx-textarea" placeholder="Enter diagnosis and chief complaint...">Hypertension — Blood pressure reading 145/92 mmHg. Patient complains of occasional headaches.</textarea>
+                                </div>
+                                <div class="medicines-section">
+                                    <div class="medicines-header">
+                                        <h4>Medications</h4>
+                                        <button class="btn-sm btn-teal" onclick="addMedicine()"><i class="fas fa-plus"></i> Add Medicine</button>
+                                    </div>
+                                    <div id="medicine-list">
+                                        <div class="medicine-row">
+                                            <div class="medicine-fields">
+                                                <div class="form-group">
+                                                    <label>Medicine Name</label>
+                                                    <input type="text" value="Amlodipine" placeholder="Medicine name" class="rx-input">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Dosage</label>
+                                                    <input type="text" value="5mg" placeholder="e.g., 10mg" class="rx-input">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Frequency</label>
+                                                    <select class="rx-input">
+                                                        <option selected>Once daily</option>
+                                                        <option>Twice daily</option>
+                                                        <option>Three times daily</option>
+                                                        <option>As needed</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Duration</label>
+                                                    <input type="text" value="30 days" placeholder="e.g., 7 days" class="rx-input">
+                                                </div>
+                                            </div>
+                                            <button class="remove-med-btn" onclick="removeMedicine(this)"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                        <div class="medicine-row">
+                                            <div class="medicine-fields">
+                                                <div class="form-group">
+                                                    <label>Medicine Name</label>
+                                                    <input type="text" value="Atorvastatin" placeholder="Medicine name" class="rx-input">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Dosage</label>
+                                                    <input type="text" value="20mg" placeholder="e.g., 10mg" class="rx-input">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Frequency</label>
+                                                    <select class="rx-input">
+                                                        <option>Once daily</option>
+                                                        <option selected>At bedtime</option>
+                                                        <option>Twice daily</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Duration</label>
+                                                    <input type="text" value="90 days" placeholder="e.g., 7 days" class="rx-input">
+                                                </div>
+                                            </div>
+                                            <button class="remove-med-btn" onclick="removeMedicine(this)"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Doctor's Notes</label>
+                                    <textarea class="rx-textarea" placeholder="Add clinical notes, follow-up instructions, lifestyle advice...">Monitor blood pressure daily. Reduce sodium intake. Return in 4 weeks for follow-up. Contact clinic immediately if BP exceeds 160/100.</textarea>
+                                </div>
+                                <div class="rx-actions">
+                                    <button class="btn btn-outline">Save as Draft</button>
+                                    <button class="btn btn-teal" onclick="showToast('Prescription issued successfully!')"><i class="fas fa-file-prescription"></i> Issue Prescription</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- ==================== ADMIN DASHBOARD ==================== -->
+    <div id="page-admin-dashboard" class="page">
+        <div class="dashboard-layout">
+            <aside class="sidebar admin-sidebar">
+                <div class="sidebar-brand admin-brand">
+                    <div class="logo-icon small orange-icon"><i class="fas fa-shield-alt"></i></div>
+                    <span>Admin Panel</span>
+                </div>
+                <div class="sidebar-user">
+                    <div class="user-avatar orange-avatar">AD</div>
+                    <div class="user-info">
+                        <strong>Admin User</strong>
+                        <span>Super Administrator</span>
+                    </div>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#" class="sidebar-link active" onclick="showAdminSection('admin-overview', this)"><i class="fas fa-chart-pie"></i> Overview</a>
+                    <a href="#" class="sidebar-link" onclick="showAdminSection('admin-staff', this)"><i class="fas fa-user-md"></i> Staff Management</a>
+                    <a href="#" class="sidebar-link" onclick="showAdminSection('admin-appointments', this)"><i class="fas fa-calendar-alt"></i> All Appointments</a>
+                    <a href="#" class="sidebar-link" onclick="showAdminSection('admin-finance', this)"><i class="fas fa-chart-line"></i> Financial Reports</a>
+                    <a href="#" class="sidebar-link" onclick="showAdminSection('admin-settings', this)"><i class="fas fa-cog"></i> Settings</a>
+                </nav>
+                <div class="sidebar-footer">
+                    <a href="#" onclick="showPage('home')" class="sidebar-link logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </aside>
+
+            <main class="dashboard-main">
+                <div class="dashboard-header admin-header">
+                    <div>
+                        <h1>Admin Control Center</h1>
+                        <p>Full system overview and management dashboard</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn btn-orange" onclick="openAddDoctorModal()"><i class="fas fa-plus"></i> Add Doctor</button>
+                    </div>
+                </div>
+
+                <!-- Admin: Overview -->
+                <div id="admin-overview" class="dash-section active">
+                    <div class="stats-row">
+                        <div class="stat-card blue">
+                            <div class="stat-icon"><i class="fas fa-user-md"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value">47</span>
+                                <span class="stat-label">Total Doctors</span>
+                            </div>
+                        </div>
+                        <div class="stat-card green">
+                            <div class="stat-icon"><i class="fas fa-users"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value">12,847</span>
+                                <span class="stat-label">Total Patients</span>
+                            </div>
+                        </div>
+                        <div class="stat-card orange">
+                            <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value">284</span>
+                                <span class="stat-label">Today's Appointments</span>
+                            </div>
+                        </div>
+                        <div class="stat-card purple">
+                            <div class="stat-icon"><i class="fas fa-dollar-sign"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value">\$48,260</span>
+                                <span class="stat-label">This Month's Revenue</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dash-grid-2">
+                        <div class="dash-card">
+                            <div class="card-header">
+                                <h3>Revenue Chart (Last 6 Months)</h3>
+                            </div>
+                            <div class="chart-container">
+                                <div class="bar-chart">
+                                    <div class="bar-group">
+                                        <div class="bar" style="height:65%"><span class="bar-val">\$32K</span></div>
+                                        <span class="bar-label">Jul</span>
+                                    </div>
+                                    <div class="bar-group">
+                                        <div class="bar" style="height:72%"><span class="bar-val">\$36K</span></div>
+                                        <span class="bar-label">Aug</span>
+                                    </div>
+                                    <div class="bar-group">
+                                        <div class="bar" style="height:58%"><span class="bar-val">\$29K</span></div>
+                                        <span class="bar-label">Sep</span>
+                                    </div>
+                                    <div class="bar-group">
+                                        <div class="bar" style="height:80%"><span class="bar-val">\$40K</span></div>
+                                        <span class="bar-label">Oct</span>
+                                    </div>
+                                    <div class="bar-group">
+                                        <div class="bar" style="height:88%"><span class="bar-val">\$44K</span></div>
+                                        <span class="bar-label">Nov</span>
+                                    </div>
+                                    <div class="bar-group">
+                                        <div class="bar active-bar" style="height:96%"><span class="bar-val">\$48K</span></div>
+                                        <span class="bar-label">Dec</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dash-card">
+                            <div class="card-header">
+                                <h3>Appointments by Department</h3>
+                            </div>
+                            <div class="dept-stats">
+                                <div class="dept-stat-item">
+                                    <div class="dept-stat-info">
+                                        <span>Cardiology</span>
+                                        <strong>284</strong>
+                                    </div>
+                                    <div class="dept-progress-bar">
+                                        <div class="dept-progress" style="width:85%;background:var(--blue)"></div>
+                                    </div>
+                                </div>
+                                <div class="dept-stat-item">
+                                    <div class="dept-stat-info">
+                                        <span>Neurology</span>
+                                        <strong>196</strong>
+                                    </div>
+                                    <div class="dept-progress-bar">
+                                        <div class="dept-progress" style="width:68%;background:var(--teal)"></div>
+                                    </div>
+                                </div>
+                                <div class="dept-stat-item">
+                                    <div class="dept-stat-info">
+                                        <span>Dentistry</span>
+                                        <strong>157</strong>
+                                    </div>
+                                    <div class="dept-progress-bar">
+                                        <div class="dept-progress" style="width:55%;background:var(--green)"></div>
+                                    </div>
+                                </div>
+                                <div class="dept-stat-item">
+                                    <div class="dept-stat-info">
+                                        <span>Orthopedics</span>
+                                        <strong>132</strong>
+                                    </div>
+                                    <div class="dept-progress-bar">
+                                        <div class="dept-progress" style="width:46%;background:var(--orange)"></div>
+                                    </div>
+                                </div>
+                                <div class="dept-stat-item">
+                                    <div class="dept-stat-info">
+                                        <span>Pediatrics</span>
+                                        <strong>118</strong>
+                                    </div>
+                                    <div class="dept-progress-bar">
+                                        <div class="dept-progress" style="width:41%;background:var(--purple)"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Admin: Staff Management -->
+                <div id="admin-staff" class="dash-section">
+                    <div class="card-header-row">
+                        <h2>Staff Management</h2>
+                        <button class="btn btn-orange" onclick="openAddDoctorModal()"><i class="fas fa-plus"></i> Add New Doctor</button>
+                    </div>
+                    <div class="search-filter-row">
+                        <div class="search-bar compact">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search doctors...">
+                        </div>
+                        <select class="filter-select">
+                            <option>All Specialties</option>
+                            <option>Cardiology</option>
+                            <option>Neurology</option>
+                            <option>Dentistry</option>
+                            <option>Orthopedics</option>
+                        </select>
+                    </div>
+                    <div class="dash-card">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Doctor</th>
+                                    <th>Specialty</th>
+                                    <th>Doctor ID</th>
+                                    <th>Patients</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="table-doctor"><div class="avatar-mini">SJ</div>Dr. Sarah Johnson</div></td>
+                                    <td>Cardiology</td>
+                                    <td><code>DOC-001</code></td>
+                                    <td>342</td>
+                                    <td><span class="badge badge-active">Active</span></td>
+                                    <td>
+                                        <button class="btn-sm btn-primary">Edit</button>
+                                        <button class="btn-sm btn-danger" onclick="deleteDoctor(this)">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><div class="table-doctor"><div class="avatar-mini mc">MC</div>Dr. Michael Chen</div></td>
+                                    <td>Dentistry</td>
+                                    <td><code>DOC-002</code></td>
+                                    <td>218</td>
+                                    <td><span class="badge badge-active">Active</span></td>
+                                    <td>
+                                        <button class="btn-sm btn-primary">Edit</button>
+                                        <button class="btn-sm btn-danger" onclick="deleteDoctor(this)">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><div class="table-doctor"><div class="avatar-mini er">ER</div>Dr. Emily Rodriguez</div></td>
+                                    <td>Neurology</td>
+                                    <td><code>DOC-003</code></td>
+                                    <td>289</td>
+                                    <td><span class="badge badge-active">Active</span></td>
+                                    <td>
+                                        <button class="btn-sm btn-primary">Edit</button>
+                                        <button class="btn-sm btn-danger" onclick="deleteDoctor(this)">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><div class="table-doctor"><div class="avatar-mini" style="background:#6f42c1">AP</div>Dr. Ahmed Patel</div></td>
+                                    <td>Orthopedics</td>
+                                    <td><code>DOC-004</code></td>
+                                    <td>175</td>
+                                    <td><span class="badge badge-pending">On Leave</span></td>
+                                    <td>
+                                        <button class="btn-sm btn-primary">Edit</button>
+                                        <button class="btn-sm btn-danger" onclick="deleteDoctor(this)">Delete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Admin: All Appointments -->
+                <div id="admin-appointments" class="dash-section">
+                    <div class="card-header-row">
+                        <h2>Global Appointments</h2>
+                        <div class="filter-row">
+                            <input type="date" class="date-filter" value="2024-12-15">
+                            <select class="filter-select"><option>All Doctors</option><option>Dr. Sarah Johnson</option><option>Dr. Michael Chen</option></select>
+                            <select class="filter-select"><option>All Status</option><option>Confirmed</option><option>Pending</option><option>Completed</option></select>
+                        </div>
+                    </div>
+                    <div class="dash-card">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Appt. ID</th>
+                                    <th>Patient</th>
+                                    <th>Doctor</th>
+                                    <th>Specialty</th>
+                                    <th>Date & Time</th>
+                                    <th>Payment</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>APT-1001</code></td>
+                                    <td>Jane Doe</td>
+                                    <td>Dr. S. Johnson</td>
+                                    <td>Cardiology</td>
+                                    <td>Dec 15 — 2:30 PM</td>
+                                    <td><span class="badge badge-paid">Paid \$150</span></td>
+                                    <td><span class="badge badge-inprogress">In Progress</span></td>
+                                    <td><button class="btn-sm btn-outline">View</button></td>
+                                </tr>
+                                <tr>
+                                    <td><code>APT-1002</code></td>
+                                    <td>Mohammed Khalid</td>
+                                    <td>Dr. S. Johnson</td>
+                                    <td>Cardiology</td>
+                                    <td>Dec 15 — 9:00 AM</td>
+                                    <td><span class="badge badge-paid">Paid \$150</span></td>
+                                    <td><span class="badge badge-completed">Completed</span></td>
+                                    <td><button class="btn-sm btn-outline">View</button></td>
+                                </tr>
+                                <tr>
+                                    <td><code>APT-1003</code></td>
+                                    <td>Michael Smith</td>
+                                    <td>Dr. M. Chen</td>
+                                    <td>Dentistry</td>
+                                    <td>Dec 15 — 11:00 AM</td>
+                                    <td><span class="badge badge-cash">Cash \$120</span></td>
+                                    <td><span class="badge badge-pending">Pending</span></td>
+                                    <td><button class="btn-sm btn-outline">View</button></td>
+                                </tr>
+                                <tr>
+                                    <td><code>APT-1004</code></td>
+                                    <td>Alice Roberts</td>
+                                    <td>Dr. E. Rodriguez</td>
+                                    <td>Neurology</td>
+                                    <td>Dec 15 — 1:00 PM</td>
+                                    <td><span class="badge badge-paid">Paid \$180</span></td>
+                                    <td><span class="badge badge-confirmed">Confirmed</span></td>
+                                    <td><button class="btn-sm btn-outline">View</button></td>
+                                </tr>
+                                <tr>
+                                    <td><code>APT-1005</code></td>
+                                    <td>Robert Patel</td>
+                                    <td>Dr. A. Patel</td>
+                                    <td>Orthopedics</td>
+                                    <td>Dec 16 — 10:00 AM</td>
+                                    <td><span class="badge badge-cash">Cash \$140</span></td>
+                                    <td><span class="badge badge-confirmed">Confirmed</span></td>
+                                    <td><button class="btn-sm btn-outline">View</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Admin: Financial Reports -->
+                <div id="admin-finance" class="dash-section">
+                    <h2>Financial & Transactions Tracker</h2>
+                    <div class="stats-row">
+                        <div class="stat-card green">
+                            <div class="stat-icon"><i class="fas fa-dollar-sign"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value">\$48,260</span>
+                                <span class="stat-label">Total Revenue (Dec)</span>
+                            </div>
+                        </div>
+                        <div class="stat-card blue">
+                            <div class="stat-icon"><i class="fas fa-credit-card"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value">\$35,420</span>
+                                <span class="stat-label">Online Payments</span>
+                            </div>
+                        </div>
+                        <div class="stat-card orange">
+                            <div class="stat-icon"><i class="fas fa-money-bill-wave"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value">\$12,840</span>
+                                <span class="stat-label">Cash Payments</span>
+                            </div>
+                        </div>
+                        <div class="stat-card purple">
+                            <div class="stat-icon"><i class="fas fa-hourglass-half"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value">\$4,200</span>
+                                <span class="stat-label">Pending</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dash-card">
+                        <div class="card-header">
+                            <h3>Transaction History</h3>
+                            <div class="export-btns">
+                                <button class="btn-sm btn-outline"><i class="fas fa-file-csv"></i> Export CSV</button>
+                                <button class="btn-sm btn-outline"><i class="fas fa-file-pdf"></i> Export PDF</button>
+                            </div>
+                        </div>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Transaction ID</th>
+                                    <th>Patient</th>
+                                    <th>Doctor</th>
+                                    <th>Amount</th>
+                                    <th>Method</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>TXN-5001</code></td>
+                                    <td>Jane Doe</td>
+                                    <td>Dr. S. Johnson</td>
+                                    <td><strong>\$150.00</strong></td>
+                                    <td><i class="fas fa-credit-card"></i> Online</td>
+                                    <td>Dec 15, 2024</td>
+                                    <td><span class="badge badge-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td><code>TXN-5002</code></td>
+                                    <td>Mohammed Khalid</td>
+                                    <td>Dr. S. Johnson</td>
+                                    <td><strong>\$150.00</strong></td>
+                                    <td><i class="fas fa-credit-card"></i> Online</td>
+                                    <td>Dec 15, 2024</td>
+                                    <td><span class="badge badge-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td><code>TXN-5003</code></td>
+                                    <td>Michael Smith</td>
+                                    <td>Dr. M. Chen</td>
+                                    <td><strong>\$120.00</strong></td>
+                                    <td><i class="fas fa-money-bill-wave"></i> Cash</td>
+                                    <td>Dec 15, 2024</td>
+                                    <td><span class="badge badge-pending">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td><code>TXN-5004</code></td>
+                                    <td>Alice Roberts</td>
+                                    <td>Dr. E. Rodriguez</td>
+                                    <td><strong>\$180.00</strong></td>
+                                    <td><i class="fas fa-credit-card"></i> Online</td>
+                                    <td>Dec 15, 2024</td>
+                                    <td><span class="badge badge-paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td><code>TXN-5005</code></td>
+                                    <td>Robert Patel</td>
+                                    <td>Dr. A. Patel</td>
+                                    <td><strong>\$140.00</strong></td>
+                                    <td><i class="fas fa-money-bill-wave"></i> Cash</td>
+                                    <td>Dec 16, 2024</td>
+                                    <td><span class="badge badge-pending">Pending</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Admin: Settings -->
+                <div id="admin-settings" class="dash-section">
+                    <h2>System Settings</h2>
+                    <div class="settings-grid">
+                        <div class="dash-card">
+                            <h3>Clinic Information</h3>
+                            <div class="form-group">
+                                <label>Clinic Name</label>
+                                <div class="input-wrapper"><i class="fas fa-hospital"></i><input type="text" value="MediCare Pro"></div>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <div class="input-wrapper"><i class="fas fa-envelope"></i><input type="email" value="care@medicarepro.com"></div>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <div class="input-wrapper"><i class="fas fa-phone"></i><input type="tel" value="+1 (800) 123-4567"></div>
+                            </div>
+                            <button class="btn btn-orange" onclick="showToast('Settings saved!')">Save Settings</button>
+                        </div>
+                        <div class="dash-card">
+                            <h3>Appointment Settings</h3>
+                            <div class="form-group">
+                                <label>Default Slot Duration (minutes)</label>
+                                <div class="input-wrapper"><i class="fas fa-clock"></i><input type="number" value="30"></div>
+                            </div>
+                            <div class="form-group">
+                                <label>Max Advance Booking (days)</label>
+                                <div class="input-wrapper"><i class="fas fa-calendar"></i><input type="number" value="30"></div>
+                            </div>
+                            <div class="form-group">
+                                <label>Cancellation Window (hours)</label>
+                                <div class="input-wrapper"><i class="fas fa-ban"></i><input type="number" value="24"></div>
+                            </div>
+                            <button class="btn btn-orange" onclick="showToast('Settings saved!')">Save Settings</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- ==================== DOCTORS PAGE ==================== -->
+    <div id="page-doctors" class="page">
+        <div class="page-header">
+            <div class="container">
+                <button class="back-btn" onclick="showPage('home')"><i class="fas fa-arrow-left"></i> Back</button>
+                <h1>Our Medical Team</h1>
+                <p>Find the right specialist for your health needs</p>
+            </div>
+        </div>
+        <div class="container section">
+            <div class="search-filter-row">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search by name or specialty...">
+                </div>
+                <div class="filter-chips" id="doctor-filter-chips">
+                    <button class="filter-chip active" onclick="filterDoctorCards('all', this)">All</button>
+                    <button class="filter-chip" onclick="filterDoctorCards('cardiology', this)">Cardiology</button>
+                    <button class="filter-chip" onclick="filterDoctorCards('dentistry', this)">Dentistry</button>
+                    <button class="filter-chip" onclick="filterDoctorCards('neurology', this)">Neurology</button>
+                    <button class="filter-chip" onclick="filterDoctorCards('orthopedics', this)">Orthopedics</button>
+                    <button class="filter-chip" onclick="filterDoctorCards('pediatrics', this)">Pediatrics</button>
+                </div>
+            </div>
+            <div class="doctors-grid" id="doctors-grid">
+                <div class="doctor-full-card" data-specialty="cardiology">
+                    <div class="doc-card-avatar">SJ</div>
+                    <div class="doc-card-body">
+                        <h3>Dr. Sarah Johnson</h3>
+                        <span class="specialty-tag">Cardiology</span>
+                        <p>15 years of experience in interventional cardiology and heart failure management.</p>
+                        <div class="doc-meta">
+                            <span><i class="fas fa-star"></i> 4.9</span>
+                            <span><i class="fas fa-users"></i> 342 Patients</span>
+                            <span><i class="fas fa-dollar-sign"></i> \$150/visit</span>
+                        </div>
+                        <div class="doc-availability">
+                            <i class="fas fa-calendar-check"></i> Available: Mon, Wed, Thu, Sat
+                        </div>
+                    </div>
+                    <div class="doc-card-actions">
+                        <button class="btn btn-primary" onclick="showPage('auth')">Book Now</button>
+                        <button class="btn btn-outline">View Profile</button>
+                    </div>
+                </div>
+                <div class="doctor-full-card" data-specialty="dentistry">
+                    <div class="doc-card-avatar mc">MC</div>
+                    <div class="doc-card-body">
+                        <h3>Dr. Michael Chen</h3>
+                        <span class="specialty-tag dentistry">Dentistry</span>
+                        <p>Specialist in cosmetic dentistry and orthodontics with over 12 years of practice.</p>
+                        <div class="doc-meta">
+                            <span><i class="fas fa-star"></i> 4.8</span>
+                            <span><i class="fas fa-users"></i> 218 Patients</span>
+                            <span><i class="fas fa-dollar-sign"></i> \$120/visit</span>
+                        </div>
+                        <div class="doc-availability">
+                            <i class="fas fa-calendar-check"></i> Available: Mon, Tue, Wed, Fri
+                        </div>
+                    </div>
+                    <div class="doc-card-actions">
+                        <button class="btn btn-primary" onclick="showPage('auth')">Book Now</button>
+                        <button class="btn btn-outline">View Profile</button>
+                    </div>
+                </div>
+                <div class="doctor-full-card" data-specialty="neurology">
+                    <div class="doc-card-avatar er">ER</div>
+                    <div class="doc-card-body">
+                        <h3>Dr. Emily Rodriguez</h3>
+                        <span class="specialty-tag neuro">Neurology</span>
+                        <p>Expert in neurological disorders, epilepsy management, and headache treatment.</p>
+                        <div class="doc-meta">
+                            <span><i class="fas fa-star"></i> 4.7</span>
+                            <span><i class="fas fa-users"></i> 289 Patients</span>
+                            <span><i class="fas fa-dollar-sign"></i> \$180/visit</span>
+                        </div>
+                        <div class="doc-availability">
+                            <i class="fas fa-calendar-check"></i> Available: Tue, Thu, Sat
+                        </div>
+                    </div>
+                    <div class="doc-card-actions">
+                        <button class="btn btn-primary" onclick="showPage('auth')">Book Now</button>
+                        <button class="btn btn-outline">View Profile</button>
+                    </div>
+                </div>
+                <div class="doctor-full-card" data-specialty="orthopedics">
+                    <div class="doc-card-avatar" style="background:#6f42c1">AP</div>
+                    <div class="doc-card-body">
+                        <h3>Dr. Ahmed Patel</h3>
+                        <span class="specialty-tag" style="background:#6f42c115;color:#6f42c1">Orthopedics</span>
+                        <p>Joint replacement and sports medicine specialist with 18 years of surgical experience.</p>
+                        <div class="doc-meta">
+                            <span><i class="fas fa-star"></i> 4.9</span>
+                            <span><i class="fas fa-users"></i> 175 Patients</span>
+                            <span><i class="fas fa-dollar-sign"></i> \$140/visit</span>
+                        </div>
+                        <div class="doc-availability">
+                            <i class="fas fa-calendar-check"></i> Available: Mon, Wed, Fri
+                        </div>
+                    </div>
+                    <div class="doc-card-actions">
+                        <button class="btn btn-primary" onclick="showPage('auth')">Book Now</button>
+                        <button class="btn btn-outline">View Profile</button>
+                    </div>
+                </div>
+                <div class="doctor-full-card" data-specialty="pediatrics">
+                    <div class="doc-card-avatar" style="background:#20c997">LW</div>
+                    <div class="doc-card-body">
+                        <h3>Dr. Lisa Wong</h3>
+                        <span class="specialty-tag" style="background:#20c99715;color:#20c997">Pediatrics</span>
+                        <p>Dedicated pediatrician with a focus on child development and preventive care.</p>
+                        <div class="doc-meta">
+                            <span><i class="fas fa-star"></i> 4.9</span>
+                            <span><i class="fas fa-users"></i> 421 Patients</span>
+                            <span><i class="fas fa-dollar-sign"></i> \$110/visit</span>
+                        </div>
+                        <div class="doc-availability">
+                            <i class="fas fa-calendar-check"></i> Available: Mon, Tue, Thu, Sat
+                        </div>
+                    </div>
+                    <div class="doc-card-actions">
+                        <button class="btn btn-primary" onclick="showPage('auth')">Book Now</button>
+                        <button class="btn btn-outline">View Profile</button>
+                    </div>
+                </div>
+                <div class="doctor-full-card" data-specialty="cardiology">
+                    <div class="doc-card-avatar" style="background:#e83e8c">RH</div>
+                    <div class="doc-card-body">
+                        <h3>Dr. Robert Hayes</h3>
+                        <span class="specialty-tag">Cardiology</span>
+                        <p>Echocardiography specialist and cardiac imaging expert with 20+ years experience.</p>
+                        <div class="doc-meta">
+                            <span><i class="fas fa-star"></i> 4.6</span>
+                            <span><i class="fas fa-users"></i> 312 Patients</span>
+                            <span><i class="fas fa-dollar-sign"></i> \$160/visit</span>
+                        </div>
+                        <div class="doc-availability">
+                            <i class="fas fa-calendar-check"></i> Available: Tue, Thu, Sat
+                        </div>
+                    </div>
+                    <div class="doc-card-actions">
+                        <button class="btn btn-primary" onclick="showPage('auth')">Book Now</button>
+                        <button class="btn btn-outline">View Profile</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== PHARMACY PAGE ==================== -->
+    <div id="page-pharmacy" class="page">
+        <div class="page-header">
+            <div class="container">
+                <button class="back-btn" onclick="showPage('home')"><i class="fas fa-arrow-left"></i> Back</button>
+                <h1>Nearby Pharmacies</h1>
+                <p>Find pharmacies close to your current location</p>
+            </div>
+        </div>
+        <div class="pharmacy-layout">
+            <div class="pharmacy-sidebar">
+                <div class="pharmacy-search">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search pharmacies...">
+                    </div>
+                    <button class="btn btn-primary detect-btn" onclick="detectLocation()">
+                        <i class="fas fa-crosshairs"></i> Detect My Location
+                    </button>
+                </div>
+                <div class="pharmacy-list">
+                    <div class="pharmacy-item active" onclick="selectPharmacy(this, 1)">
+                        <div class="pharm-icon"><i class="fas fa-pills"></i></div>
+                        <div class="pharm-info">
+                            <strong>MediPlus Pharmacy</strong>
+                            <span>123 Health Ave, Suite 1</span>
+                            <div class="pharm-meta">
+                                <span class="distance"><i class="fas fa-map-marker-alt"></i> 0.3 km</span>
+                                <span class="badge badge-active">Open Now</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pharmacy-item" onclick="selectPharmacy(this, 2)">
+                        <div class="pharm-icon"><i class="fas fa-prescription-bottle-alt"></i></div>
+                        <div class="pharm-info">
+                            <strong>CarePoint Pharmacy</strong>
+                            <span>456 Medical Blvd</span>
+                            <div class="pharm-meta">
+                                <span class="distance"><i class="fas fa-map-marker-alt"></i> 0.7 km</span>
+                                <span class="badge badge-active">Open Now</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pharmacy-item" onclick="selectPharmacy(this, 3)">
+                        <div class="pharm-icon"><i class="fas fa-pills"></i></div>
+                        <div class="pharm-info">
+                            <strong>HealthFirst Drugs</strong>
+                            <span>789 Wellness Rd</span>
+                            <div class="pharm-meta">
+                                <span class="distance"><i class="fas fa-map-marker-alt"></i> 1.2 km</span>
+                                <span class="badge badge-active">Open Now</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pharmacy-item" onclick="selectPharmacy(this, 4)">
+                        <div class="pharm-icon"><i class="fas fa-prescription-bottle"></i></div>
+                        <div class="pharm-info">
+                            <strong>City Pharmacy</strong>
+                            <span>321 Downtown St</span>
+                            <div class="pharm-meta">
+                                <span class="distance"><i class="fas fa-map-marker-alt"></i> 1.8 km</span>
+                                <span class="badge badge-pending">Closes at 9PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pharmacy-item" onclick="selectPharmacy(this, 5)">
+                        <div class="pharm-icon"><i class="fas fa-tablets"></i></div>
+                        <div class="pharm-info">
+                            <strong>NovaCare Pharmacy</strong>
+                            <span>654 North Park Ave</span>
+                            <div class="pharm-meta">
+                                <span class="distance"><i class="fas fa-map-marker-alt"></i> 2.3 km</span>
+                                <span class="badge badge-active">Open 24/7</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pharmacy-item" onclick="selectPharmacy(this, 6)">
+                        <div class="pharm-icon"><i class="fas fa-pills"></i></div>
+                        <div class="pharm-info">
+                            <strong>QuickMeds Express</strong>
+                            <span>987 East Side Lane</span>
+                            <div class="pharm-meta">
+                                <span class="distance"><i class="fas fa-map-marker-alt"></i> 3.1 km</span>
+                                <span class="badge badge-danger">Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pharmacy-map">
+                <div class="map-container" id="map-container">
+                    <div class="map-placeholder">
+                        <div class="map-grid"></div>
+                        <div class="map-roads"></div>
+                        <div class="map-pin user-pin" style="top:45%;left:48%">
+                            <div class="pin-dot user"></div>
+                            <div class="pin-label">You</div>
+                        </div>
+                        <div class="map-pin pharm-pin active-pin" id="pin-1" style="top:35%;left:55%">
+                            <div class="pin-dot pharm"><i class="fas fa-plus"></i></div>
+                            <div class="pin-label">MediPlus</div>
+                        </div>
+                        <div class="map-pin pharm-pin" id="pin-2" style="top:52%;left:62%">
+                            <div class="pin-dot pharm"><i class="fas fa-plus"></i></div>
+                            <div class="pin-label">CarePoint</div>
+                        </div>
+                        <div class="map-pin pharm-pin" id="pin-3" style="top:30%;left:38%">
+                            <div class="pin-dot pharm"><i class="fas fa-plus"></i></div>
+                            <div class="pin-label">HealthFirst</div>
+                        </div>
+                        <div class="map-pin pharm-pin" id="pin-4" style="top:60%;left:40%">
+                            <div class="pin-dot pharm"><i class="fas fa-plus"></i></div>
+                            <div class="pin-label">City Pharmacy</div>
+                        </div>
+                        <div class="map-pin pharm-pin" id="pin-5" style="top:25%;left:65%">
+                            <div class="pin-dot pharm"><i class="fas fa-plus"></i></div>
+                            <div class="pin-label">NovaCare</div>
+                        </div>
+                        <div class="map-pin pharm-pin" id="pin-6" style="top:65%;left:70%">
+                            <div class="pin-dot pharm closed-pin"><i class="fas fa-plus"></i></div>
+                            <div class="pin-label">QuickMeds</div>
+                        </div>
+                        <div class="map-info-box" id="map-info-box">
+                            <div class="info-box-content">
+                                <strong id="info-name">MediPlus Pharmacy</strong>
+                                <span id="info-address">123 Health Ave, Suite 1</span>
+                                <span id="info-phone"><i class="fas fa-phone"></i> +1 (555) 234-5678</span>
+                                <span id="info-hours"><i class="fas fa-clock"></i> Open: 8AM – 10PM</span>
+                                <div class="info-actions">
+                                    <button class="btn-sm btn-primary"><i class="fas fa-directions"></i> Directions</button>
+                                    <button class="btn-sm btn-outline"><i class="fas fa-phone"></i> Call</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map-controls">
+                            <button class="map-ctrl-btn" onclick="zoomIn()"><i class="fas fa-plus"></i></button>
+                            <button class="map-ctrl-btn" onclick="zoomOut()"><i class="fas fa-minus"></i></button>
+                            <button class="map-ctrl-btn" onclick="detectLocation()"><i class="fas fa-crosshairs"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== ADD DOCTOR MODAL ==================== -->
+    <div id="add-doctor-modal" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3><i class="fas fa-user-md"></i> Add New Doctor</h3>
+                <button class="modal-close" onclick="closeAddDoctorModal()"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="notice-banner"><i class="fas fa-info-circle"></i> Login credentials will be auto-generated and sent to the doctor's email.</div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <div class="input-wrapper"><i class="fas fa-user"></i><input type="text" placeholder="First name"></div>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <div class="input-wrapper"><i class="fas fa-user"></i><input type="text" placeholder="Last name"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <div class="input-wrapper"><i class="fas fa-envelope"></i><input type="email" placeholder="doctor@medicarepro.com"></div>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <div class="input-wrapper"><i class="fas fa-phone"></i><input type="tel" placeholder="+1 (555) 000-0000"></div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Specialty</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-stethoscope"></i>
+                            <select>
+                                <option value="">Select Specialty</option>
+                                <option>Cardiology</option>
+                                <option>Dentistry</option>
+                                <option>Neurology</option>
+                                <option>Orthopedics</option>
+                                <option>Pediatrics</option>
+                                <option>Dermatology</option>
+                                <option>Ophthalmology</option>
+                                <option>Psychiatry</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Years of Experience</label>
+                        <div class="input-wrapper"><i class="fas fa-award"></i><input type="number" placeholder="e.g., 10"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Consultation Fee ($)</label>
+                    <div class="input-wrapper"><i class="fas fa-dollar-sign"></i><input type="number" placeholder="e.g., 150"></div>
+                </div>
+                <div class="form-group">
+                    <label>Doctor Bio</label>
+                    <textarea class="rx-textarea" placeholder="Enter a brief biography and professional summary..."></textarea>
+                </div>
+                <div class="generated-credentials">
+                    <h4><i class="fas fa-key"></i> Auto-Generated Credentials</h4>
+                    <div class="credential-row">
+                        <span>Doctor ID:</span>
+                        <code>DOC-0048</code>
+                        <button class="copy-btn" onclick="copyText('DOC-0048')"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <div class="credential-row">
+                        <span>Temp Password:</span>
+                        <code>Temp@2024#Med</code>
+                        <button class="copy-btn" onclick="copyText('Temp@2024#Med')"><i class="fas fa-copy"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closeAddDoctorModal()">Cancel</button>
+                <button class="btn btn-orange" onclick="addDoctor()"><i class="fas fa-user-plus"></i> Add Doctor & Send Credentials</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== AI CHATBOT WIDGET ==================== -->
+    <div class="chatbot-widget" id="chatbot-widget">
+        <button class="chatbot-toggle" id="chatbot-toggle" onclick="toggleChatbot()">
+            <i class="fas fa-robot" id="chat-icon"></i>
+            <span class="chat-notification">1</span>
+        </button>
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-avatar"><i class="fas fa-robot"></i></div>
+                    <div>
+                        <strong>MediBot AI</strong>
+                        <span class="online-dot">● Online</span>
+                    </div>
+                </div>
+                <button class="chat-close" onclick="toggleChatbot()"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="chat-message bot">
+                    <div class="msg-avatar"><i class="fas fa-robot"></i></div>
+                    <div class="msg-bubble">
+                        <p>Hello! 👋 I'm MediBot, your AI assistant. I can help you with:</p>
+                        <div class="quick-replies">
+                            <button onclick="quickReply('book')">📅 Book Appointment</button>
+                            <button onclick="quickReply('doctors')">👨‍⚕️ Find Doctors</button>
+                            <button onclick="quickReply('pharmacy')">💊 Nearby Pharmacy</button>
+                            <button onclick="quickReply('hours')">🕐 Clinic Hours</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Type your message..." onkeypress="handleChatKey(event)">
+                <button class="send-btn" onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== TOAST NOTIFICATION ==================== -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-message">Action completed successfully!</span>
+    </div>
+
+    <!-- ==================== CONFIRM DIALOG ==================== -->
+    <div id="confirm-dialog" class="modal-overlay">
+        <div class="modal small-modal">
+            <div class="modal-header danger-header">
+                <h3><i class="fas fa-exclamation-triangle"></i> Confirm Action</h3>
+            </div>
+            <div class="modal-body">
+                <p id="confirm-message">Are you sure you want to proceed with this action?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closeConfirm()">Cancel</button>
+                <button class="btn btn-danger" id="confirm-yes-btn">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
