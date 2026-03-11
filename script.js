@@ -124,7 +124,19 @@ function togglePass(inputId) {
         if (icon) icon.classList.replace('fa-eye-slash', 'fa-eye');
     }
 }
+function showDoctorLogin() {
+    showPage('doctor-login'); // بتفتح صفحة الدكتور
+    // بنخلي الفورم اللي جوه صفحة الدكتور نشطة
+    const form = document.querySelector('#page-doctor-login .auth-form');
+    if (form) form.classList.add('active');
+}
 
+function showAdminLogin() {
+    showPage('admin-login'); // بتفتح صفحة الأدمن
+    // بنخلي الفورم اللي جوه صفحة الأدمن نشطة
+    const form = document.querySelector('#page-admin-login .auth-form');
+    if (form) form.classList.add('active');
+}
 // ==================== DASHBOARD SECTIONS ====================
 
 function showDashSection(sectionId, linkEl) {
